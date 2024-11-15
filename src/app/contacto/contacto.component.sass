@@ -1,0 +1,111 @@
+// Variables de colores y configuraciones globales
+$primary-color: #007bff
+$info-color: #17a2b8
+$danger-color: #dc3545
+$text-dark: #343a40
+$text-light: #6c757d
+$bg-light: #f8f9fa
+$transition-speed: 0.3s
+
+// Contenedor principal
+.container
+  margin-top: 2rem
+
+  h1
+    color: $text-dark
+    font-weight: bold
+    text-align: center
+    margin-bottom: 1rem
+
+  p
+    color: $text-light
+    font-size: 1.1rem
+    text-align: center
+    margin-bottom: 2rem
+
+// Estilo del formulario
+form
+  .form-group
+    margin-bottom: 1.5rem
+
+    label
+      color: $text-dark
+      font-weight: bold
+
+    .form-control
+      border-radius: 0.5rem
+      padding: 1rem
+      border: 1px solid #ced4da
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+      transition: border-color $transition-speed, box-shadow $transition-speed
+
+      &:focus
+        border-color: $primary-color
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3)
+
+  .btn-primary
+    background-color: $primary-color
+    color: white
+    border: none
+    padding: 0.75rem 1.5rem
+    border-radius: 0.5rem
+    font-weight: bold
+    transition: background-color $transition-speed, transform $transition-speed
+
+    &:hover
+      background-color: darken($primary-color, 10%)
+      transform: scale(1.05)
+
+// Estilo de la columna de Información de Contacto
+.col-md-6
+  h3, h4
+    color: $text-dark
+    font-weight: bold
+    margin-bottom: 1rem
+
+  p
+    color: $text-light
+    font-size: 1.1rem
+
+  .btn-outline-primary, .btn-outline-info, .btn-outline-danger
+    margin: 0.5rem
+    padding: 0.5rem 1.5rem
+    border-radius: 0.5rem
+    border: 2px solid transparent
+    font-weight: bold
+    transition: border-color $transition-speed, transform $transition-speed
+
+    &:hover
+      transform: scale(1.05)
+
+  .btn-outline-primary
+    border-color: $primary-color
+    color: $primary-color
+
+    &:hover
+      border-color: darken($primary-color, 10%)
+      color: darken($primary-color, 10%)
+
+  .btn-outline-info
+    border-color: $info-color
+    color: $info-color
+
+    &:hover
+      border-color: darken($info-color, 10%)
+      color: darken($info-color, 10%)
+
+  .btn-outline-danger
+    border-color: $danger-color
+    color: $danger-color
+
+    &:hover
+      border-color: darken($danger-color, 10%)
+      color: darken($danger-color, 10%)
+
+// Responsividad
+@media (max-width: 768px)
+  .container
+    padding: 0 1rem
+
+  .col-md-6
+    margin-bottom: 2rem

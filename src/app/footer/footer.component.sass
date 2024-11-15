@@ -1,0 +1,57 @@
+// Variables de colores y configuraciones globales
+$bg-dark: #343a40
+$text-white: #ffffff
+$text-hover: #ffdd57
+$transition-speed: 0.3s
+
+// Estilo del footer
+footer
+  background-color: $bg-dark
+  color: $text-white
+  padding: 1.5rem 0
+
+  .container
+    text-align: center
+
+    p
+      margin: 0 0 1rem 0
+      font-size: 0.9rem
+
+    ul
+      margin: 0
+      padding: 0
+      list-style: none
+      display: inline-flex
+      gap: 1rem
+
+      li
+        .text-white
+          color: $text-white
+          text-decoration: none
+          transition: color $transition-speed
+
+          &:hover
+            color: $text-hover
+
+    div
+      margin-top: 1rem
+
+      a
+        color: $text-white
+        margin: 0 0.5rem
+        text-decoration: none
+        transition: color $transition-speed
+
+        &:hover
+          color: $text-hover
+
+// Responsividad para pantallas pequeñas
+@media (max-width: 768px)
+  footer
+    .container
+      ul
+        flex-direction: column
+        gap: 0.5rem
+
+      div
+        margin-top: 0.5rem

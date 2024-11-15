@@ -1,0 +1,99 @@
+// Variables de colores y configuraciones globales
+$primary-color: #007bff
+$info-color: #17a2b8
+$text-dark: #343a40
+$text-light: #6c757d
+$bg-light: #f8f9fa
+$transition-speed: 0.3s
+
+// Contenedor principal
+.container
+  margin-top: 2rem
+
+  h1
+    color: $text-dark
+    font-weight: bold
+    text-align: center
+    margin-bottom: 1rem
+
+  p
+    color: $text-light
+    font-size: 1.1rem
+    text-align: center
+    margin-bottom: 2rem
+
+// Tarjetas de productos
+.card
+  border: none
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+  transition: transform $transition-speed, box-shadow $transition-speed
+
+  &:hover
+    transform: translateY(-5px)
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15)
+
+  .card-img-top
+    border-radius: 0.5rem 0.5rem 0 0
+    height: 200px
+    object-fit: cover
+
+  .card-body
+    padding: 1.5rem
+
+    .card-title
+      color: $text-dark
+      font-size: 1.25rem
+      margin-bottom: 0.5rem
+
+    .card-text
+      color: $text-light
+      margin-bottom: 1rem
+
+    .font-weight-bold
+      color: $text-dark
+      font-weight: bold
+      margin-bottom: 1rem
+
+    .btn
+      background-color: $primary-color
+      color: white
+      border: none
+      transition: background-color $transition-speed, transform $transition-speed
+
+      &:hover
+        background-color: darken($primary-color, 10%)
+        transform: scale(1.05)
+
+// Sección "Más Opciones"
+.mt-5.text-center
+  background-color: $bg-light
+  padding: 2rem
+  border-radius: 0.5rem
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+
+  h2
+    color: $text-dark
+    margin-bottom: 1rem
+
+  p
+    color: $text-light
+    font-size: 1.1rem
+    margin-bottom: 1.5rem
+
+  .btn-info
+    background-color: $info-color
+    color: white
+    border: none
+    transition: background-color $transition-speed, transform $transition-speed
+
+    &:hover
+      background-color: darken($info-color, 10%)
+      transform: scale(1.05)
+
+// Responsividad
+@media (max-width: 768px)
+  .card
+    margin-bottom: 2rem
+
+  .mt-5.text-center
+    padding: 1.5rem

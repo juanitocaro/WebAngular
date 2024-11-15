@@ -1,0 +1,94 @@
+// Variables de colores y configuraciones globales
+$primary-color: #007bff
+$info-color: #17a2b8
+$text-dark: #343a40
+$text-light: #6c757d
+$bg-light: #f8f9fa
+$transition-speed: 0.3s
+
+// Contenedor principal
+.container
+  margin-top: 2rem
+
+  h1
+    color: $text-dark
+    font-weight: bold
+    text-align: center
+    margin-bottom: 1rem
+
+  p
+    color: $text-light
+    font-size: 1.1rem
+    text-align: center
+    margin-bottom: 2rem
+
+// Sección principal
+.mt-5
+  h2
+    color: $text-dark
+    font-weight: bold
+    margin-top: 2rem
+    margin-bottom: 1rem
+
+  p
+    color: $text-light
+    line-height: 1.6
+    margin-bottom: 1.5rem
+
+  ul
+    margin: 1.5rem 0
+    padding: 0
+    list-style: none
+
+    li
+      position: relative
+      color: $text-light
+      margin-bottom: 1rem
+      padding-left: 1.5rem
+      line-height: 1.6
+
+      &::before
+        content: "•"
+        color: $primary-color
+        font-weight: bold
+        position: absolute
+        left: 0
+        top: 0.2rem
+
+// Sección "Únete a Nuestra Comunidad"
+.mt-5.text-center
+  background-color: $bg-light
+  padding: 2rem
+  border-radius: 0.5rem
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) // Línea corregida
+  h2
+    color: $text-dark
+    margin-bottom: 1rem
+
+  p
+    color: $text-light
+    font-size: 1.1rem
+    margin-bottom: 1.5rem
+
+  .btn-info
+    background-color: $info-color
+    color: white
+    border: none
+    transition: background-color $transition-speed, transform $transition-speed
+
+    &:hover
+      background-color: darken($info-color, 10%)
+      transform: scale(1.05)
+
+// Responsividad
+@media (max-width: 768px)
+  .container
+    h1
+      font-size: 1.5rem
+
+    .mt-5
+      h2
+        font-size: 1.25rem
+
+      p, li
+        font-size: 1rem
